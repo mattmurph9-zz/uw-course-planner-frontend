@@ -26,10 +26,10 @@ class Term extends Component {
         input = input.replace(/\r?\n|\r/g, ''); // remove newlines
         input = input.replace(/ /g, ''); // remove spaces
         const newCourses = input.split(";");
-        newCourses.pop();
         const courses = [...this.state.courses, ...newCourses];
         this.setState({ courses, input: '' });
         this.props.addCourses(this.props.name, courses);
+        console.log(courses);
     }
 
     renderCourses = () => {

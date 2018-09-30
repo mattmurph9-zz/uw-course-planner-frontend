@@ -75,7 +75,6 @@ class TermList extends Component {
         let termStatus = this.state.termStatus;
         termStatus[term] = status;
         this.setState({termStatus});
-        console.log(termStatus);
     }
 
     addGreeting = (name) => {
@@ -90,8 +89,8 @@ class TermList extends Component {
     }
 
     submit = () => {
-        // make api call
-        console.log('API call');
+        const { termCourses, termStatus, electives } = this.state;
+        this.props.getCoursePlan(termCourses, termStatus, electives);
     }
 
     render() {
