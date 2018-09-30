@@ -4,7 +4,8 @@ import TermList from './TermList';
 import Output from './Output';
 
 class Layout extends Component {
-    constructor() {
+    constructor(props) {
+        super(props);
         this.state = {
             input: true,
         }

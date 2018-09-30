@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../css/TermList.css'
-import AddGreeter from './AddGreeter';
 
 import Term from './Term';
 import DesiredElectives from './DesiredElectives';

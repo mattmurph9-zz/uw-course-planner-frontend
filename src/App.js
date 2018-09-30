@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/App.css';
-import TermList from './components/TermList'
+import Layout from './components/Layout'
 
 const App = () => {
   return (
