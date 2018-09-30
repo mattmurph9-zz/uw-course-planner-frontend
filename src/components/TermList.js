@@ -95,7 +95,7 @@ class TermList extends Component {
 
     render() {
         return (
-            <div className="HelloWorldList">
+            <div className="TermList">
                 <DesiredElectives addElectives={this.addElectives} />
                 <button className="submit" onClick={this.submit}>Submit</button>
                 <h4>Please enter known courses for each term, separated by a ';'</h4>

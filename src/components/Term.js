@@ -16,7 +16,7 @@ class Term extends Component {
     }
 
     handleRadioChange = (event) => {
-        const status = (event.target.value === "oncampus")
+        const status = (event.target.value === "oncampus");
         this.setState({ onCampus: status });
         this.props.changeTermStatus(this.props.name, status);
     }
