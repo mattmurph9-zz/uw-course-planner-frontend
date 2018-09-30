@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DesiredElectives extends Component {
+class ExistingCourses extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +20,6 @@ class DesiredElectives extends Component {
         const newCourses = input.split(";");
         const courses = [...this.state.courses, ...newCourses];
         this.setState({ courses, input: '' });
-        this.props.addElectives(courses);
     }
 
     renderCourses = () => {
@@ -35,17 +34,17 @@ class DesiredElectives extends Component {
         const { courses } = this.state;
         return (
             <div>
-                <h3>Desired Electives</h3>
+                <h3>Courses Already Taken</h3>
                 <div className="FormArea">
-                    <p>Enter courses you want to take some time in the future, but don't know which term.</p>
+                    <p>Enter courses you have already and will have completed by the end of the current term.</p>
                     <textarea value={this.state.input} onChange={this.handleTextChange} />
                     <button className="add" onClick={this.addCourses}>
                         Add
                     </button>
-                    <button className="clear" onClick={() => this.setState({courses: []})}>
+                    <button className="clear" onClick={() => this.setState({ courses: [] })}>
                         Clear
                     </button>
-                    { courses.length !== 0 &&
+                    {courses.length !== 0 &&
                         this.renderCourses()
                     }
                 </div>
@@ -54,4 +53,4 @@ class DesiredElectives extends Component {
     }
 }
 
-export default DesiredElectives;
+export default ExistingCourses;

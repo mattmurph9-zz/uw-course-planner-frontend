@@ -61,8 +61,8 @@ class Term extends Component {
                 </div>
                 }
                 <div onChange={this.handleRadioChange}>
-                    <input type="radio" value="oncampus" name={this.props.name} defaultChecked/> On Campus
-                    <input type="radio" value="offcampus" name={this.props.name}/> Off Campus
+                    <label><input type="radio" value="oncampus" name={this.props.name} defaultChecked /> On Campus</label>
+                    <label><input type="radio" value="offcampus" name={this.props.name} /> Off Campus</label>
                 </div>
             </div>
         );

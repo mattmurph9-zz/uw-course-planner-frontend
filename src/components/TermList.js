@@ -3,6 +3,7 @@ import '../css/TermList.css'
 
 import Term from './Term';
 import DesiredElectives from './DesiredElectives';
+import ExistingCourses from './ExistingCourses';
 
 class TermList extends Component {
     constructor(props) {
@@ -95,11 +96,16 @@ class TermList extends Component {
 
     render() {
         return (
-            <div className="TermList">
+            <div className="TermList clearfix">
+                <strong>All input fields accept a list of courses in the form 'SE390; CS343'</strong>
+                <ExistingCourses/>
                 <DesiredElectives addElectives={this.addElectives} />
+                <h3>Mandatory Courses</h3>
+                <div className="FormArea">
+                    <p>Please enter known/ mandatory courses for each term. These are often courses that show up in the undergraduate calendar.</p>
+                    {this.renderTerms()}
+                </div>
                 <button className="submit" onClick={this.submit}>Submit</button>
-                <h4>Please enter known courses for each term, separated by a ';'</h4>
-                {this.renderTerms()}
             </div>
         );
     }
